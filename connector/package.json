@@ -1,0 +1,40 @@
+{
+  "name": "my-basic-auth-connector",
+  "description": "Connector that ingests Excel data and built-in taco excel file parser from a basic auth endpoint",
+  "author": "",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "@tableau/taco-toolkit": "2.0.0"
+  },
+  "scripts": {
+    "build": "taco-scripts build",
+    "clean": "taco-scripts clean",
+    "start": "taco-scripts start"
+  },
+  "targets": {
+    "handlers": {
+      "includeNodeModules": true,
+      "sourceMap": false,
+      "context": "web-worker",
+      "distDir": "../dist/handlers",
+      "outputFormat": "commonjs",
+      "isLibrary": false,
+      "optimize": false
+    },
+    "app": {
+      "publicUrl": "./",
+      "distDir": "../dist/app",
+      "engines": {
+        "browsers": "Chrome 70"
+      }
+    }
+  },
+  "alias": {
+    "process": false,
+    "path": false,
+    "util": false
+  }
+}
